@@ -10,7 +10,7 @@
     <SpaProxyServerUrl>https://localhost:5173</SpaProxyServerUrl>
     <UserSecretsId>8e4e7e13-220d-47b9-911b-8cbba84c0633</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
-	<DockerfileContext>..\</DockerfileContext>
+	<DockerfileContext>..\..\</DockerfileContext>
   </PropertyGroup>
 
   <ItemGroup>
