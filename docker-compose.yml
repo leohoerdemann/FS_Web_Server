@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  fs_web_server.server:
+    image: ${DOCKER_REGISTRY-}fswebserverserver
+    build:
+      context: .
+      dockerfile: FS_Web_Server.Server/Dockerfile
