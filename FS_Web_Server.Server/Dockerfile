@@ -9,9 +9,9 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-# COPY ["fs_web_server.client/nuget.config", "fs_web_server.client/"]
-COPY ["FS_Web_Server.Server/FS_Web_Server.Server.csproj", "FS_Web_Server.Server/"]
-COPY ["fs_web_server.client/fs_web_server.client.esproj", "fs_web_server.client/"]
+COPY ["../fs_web_server.client/nuget.config", "fs_web_server.client/"]
+COPY ["../FS_Web_Server.Server/FS_Web_Server.Server.csproj", "FS_Web_Server.Server/"]
+COPY ["../fs_web_server.client/fs_web_server.client.esproj", "fs_web_server.client/"]
 RUN dotnet restore "./FS_Web_Server.Server/./FS_Web_Server.Server.csproj"
 COPY . .
 WORKDIR "/src/FS_Web_Server.Server"
